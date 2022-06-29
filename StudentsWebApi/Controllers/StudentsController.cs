@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using StudentsWebApi.Context;
-using StudentsWebApi.Model;
+using StudentsWebApi.Domain.Model;
+using StudentsWebApi.Infrastructure.Context;
 
 namespace StudentsWebApi.Controllers
 {
@@ -21,27 +16,33 @@ namespace StudentsWebApi.Controllers
             _context = context;
         }
 
-        // GET: api/Students
+        /// <summary>
+        /// Get all students from database
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
-          if (_context.Students == null)
-          {
-              return NotFound();
-          }
-            return await _context.Students.ToListAsync();
+            if (_context.Students == null)
+            {
+                return NotFound();
+            }
+            return await _context.Students.Include(x => x.Teacher).ToListAsync();
         }
 
-        // GET: api/Students/5
+        /// <summary>
+        /// Get student by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-          if (_context.Students == null)
-          {
-              return NotFound();
-          }
-            var student = await _context.Students.FindAsync(id);
-
+            if (_context.Students == null)
+            {
+                return NotFound();
+            }
+            var student = await _context.Students.Include(x => x.Teacher).FirstAsync(p => p.StudentId == id);
             if (student == null)
             {
                 return NotFound();
@@ -50,8 +51,12 @@ namespace StudentsWebApi.Controllers
             return student;
         }
 
-        // PUT: api/Students/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Edit student by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="student"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStudent(int id, Student student)
         {
@@ -81,22 +86,29 @@ namespace StudentsWebApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Students
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Add new student to database
+        /// </summary>
+        /// <param name="student"></param>
+        /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<Student>> PostStudent(Student student)
+        public async Task<ActionResult<Student>> PostStudent([FromBody] Student student)
         {
-          if (_context.Students == null)
-          {
-              return Problem("Entity set 'DBContext.Students'  is null.");
-          }
+            if (_context.Students == null)
+            {
+                return Problem("Entity set 'DBContext.Students'  is null.");
+            }
             _context.Students.Add(student);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetStudent", new { id = student.StudentId }, student);
         }
 
-        // DELETE: api/Students/5
+        /// <summary>
+        /// Delete student by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
         {
