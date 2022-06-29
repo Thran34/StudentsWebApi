@@ -4,7 +4,7 @@ namespace StudentsWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LessonController
+    public class LessonController : ControllerBase
     {
 
     }
