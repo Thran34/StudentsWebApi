@@ -1,0 +1,17 @@
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\bin\Debug\net6.0\StudentsWebApi.Infrastructure.deps.json
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\bin\Debug\net6.0\StudentsWebApi.Infrastructure.runtimeconfig.json
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\bin\Debug\net6.0\StudentsWebApi.Infrastructure.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\bin\Debug\net6.0\StudentsWebApi.Infrastructure.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\bin\Debug\net6.0\StudentsWebApi.Domain.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\bin\Debug\net6.0\StudentsWebApi.Domain.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.AssemblyInfo.cs
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.csproj.CopyComplete
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\refint\StudentsWebApi.Infrastructure.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\StudentsWebApi.Infrastructure.genruntimeconfig.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Infrastructure\obj\Debug\net6.0\ref\StudentsWebApi.Infrastructure.dll
