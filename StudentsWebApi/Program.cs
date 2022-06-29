@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<StudentsWebApi.Context.DbContext>(options =>
+builder.Services.AddDbContext<StudentsWebApi.Context.DBContext>(options =>
     options.UseSqlServer(connectionString));
 
 
