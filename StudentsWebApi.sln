@@ -9,11 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1283E1C1-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{83F84F6A-0C34-47C3-944E-0FECDDB1A072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsWebApi.Infrastructure", "StudentsWebApi.Infrastructure\StudentsWebApi.Infrastructure.csproj", "{AFAB4CAD-68CD-4919-93BE-F937EEA3555B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentsWebApi.Infrastructure", "StudentsWebApi.Infrastructure\StudentsWebApi.Infrastructure.csproj", "{AFAB4CAD-68CD-4919-93BE-F937EEA3555B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{61DA17BF-56C7-4E4C-A277-21FBA7DCFD79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsWebApi.Domain", "StudentsWebApiDomain\StudentsWebApi.Domain.csproj", "{8ACC88DC-8818-4881-80B4-A5D5DBE8BC2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentsWebApi.Domain", "StudentsWebApiDomain\StudentsWebApi.Domain.csproj", "{8ACC88DC-8818-4881-80B4-A5D5DBE8BC2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{93DAB668-0902-4D39-9DBA-F2EB50AE6E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentMVC", "StudentMVC\StudentMVC.csproj", "{D7925A6E-FAE1-4B80-9646-7811F7C7F4C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{8ACC88DC-8818-4881-80B4-A5D5DBE8BC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ACC88DC-8818-4881-80B4-A5D5DBE8BC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ACC88DC-8818-4881-80B4-A5D5DBE8BC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7925A6E-FAE1-4B80-9646-7811F7C7F4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7925A6E-FAE1-4B80-9646-7811F7C7F4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7925A6E-FAE1-4B80-9646-7811F7C7F4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7925A6E-FAE1-4B80-9646-7811F7C7F4C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AFAB4CAD-68CD-4919-93BE-F937EEA3555B} = {83F84F6A-0C34-47C3-944E-0FECDDB1A072}
 		{8ACC88DC-8818-4881-80B4-A5D5DBE8BC2E} = {61DA17BF-56C7-4E4C-A277-21FBA7DCFD79}
+		{D7925A6E-FAE1-4B80-9646-7811F7C7F4C4} = {93DAB668-0902-4D39-9DBA-F2EB50AE6E3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A8B4638-3B01-43AB-95F6-66AEB5D07091}

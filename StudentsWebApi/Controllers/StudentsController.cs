@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentsWebApi.Domain.Model;
 using StudentsWebApi.Infrastructure.Context;
@@ -7,6 +8,7 @@ namespace StudentsWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("MyAllowSpecificOrigins")]
     public class StudentsController : ControllerBase
     {
         private readonly DBContext _context;
