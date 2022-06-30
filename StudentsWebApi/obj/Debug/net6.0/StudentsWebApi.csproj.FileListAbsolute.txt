@@ -277,3 +277,6 @@ C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi\bin\Debug\net
 C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi\bin\Debug\net6.0\StudentsWebApi.Domain.pdb
 C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi\bin\Debug\net6.0\StudentsWebApi.xml
 C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi\obj\Debug\net6.0\StudentsWebApi.xml
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi\bin\Debug\net6.0\StudentsWebApi.staticwebassets.runtime.json
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll

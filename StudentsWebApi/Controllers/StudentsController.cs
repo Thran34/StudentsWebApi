@@ -116,13 +116,15 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            var student = await _context.Students.FindAsync(id);
+            var student = await _context.Students.Include(x => x.Teacher).FirstAsync(p => p.StudentId == id);
+            var teacher = await _context.Teachers.FirstAsync(k => k.TeacherId == id);
             if (student == null)
             {
                 return NotFound();
             }
 
             _context.Students.Remove(student);
+            _context.Teachers.Remove(teacher);
             await _context.SaveChangesAsync();
 
             return NoContent();

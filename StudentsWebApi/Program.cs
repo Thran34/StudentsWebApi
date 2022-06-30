@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHealthChecks();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -45,6 +46,7 @@ if (app.Environment.IsDevelopment())
 {
 
 }
+app.UseHealthChecks("/hc");
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
