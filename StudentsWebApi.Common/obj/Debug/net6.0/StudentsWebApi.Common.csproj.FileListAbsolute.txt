@@ -1,0 +1,12 @@
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\bin\Debug\net6.0\StudentsWebApi.Common.deps.json
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\bin\Debug\net6.0\StudentsWebApi.Common.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\bin\Debug\net6.0\StudentsWebApi.Common.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\StudentsWebApi.Common.csproj.AssemblyReference.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\StudentsWebApi.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\StudentsWebApi.Common.AssemblyInfoInputs.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\StudentsWebApi.Common.AssemblyInfo.cs
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\StudentsWebApi.Common.csproj.CoreCompileInputs.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\StudentsWebApi.Common.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\refint\StudentsWebApi.Common.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\StudentsWebApi.Common.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Common\obj\Debug\net6.0\ref\StudentsWebApi.Common.dll

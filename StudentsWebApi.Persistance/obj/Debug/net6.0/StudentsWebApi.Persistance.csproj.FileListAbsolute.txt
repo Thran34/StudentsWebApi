@@ -1,0 +1,15 @@
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\bin\Debug\net6.0\StudentsWebApi.Persistance.deps.json
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\bin\Debug\net6.0\StudentsWebApi.Persistance.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\bin\Debug\net6.0\StudentsWebApi.Persistance.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\bin\Debug\net6.0\StudentsWebApi.Domain.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\bin\Debug\net6.0\StudentsWebApi.Domain.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.csproj.AssemblyReference.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.AssemblyInfoInputs.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.AssemblyInfo.cs
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.csproj.CoreCompileInputs.cache
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.csproj.CopyComplete
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\refint\StudentsWebApi.Persistance.dll
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\StudentsWebApi.Persistance.pdb
+C:\Users\thran\Desktop\Moje projekty\StudentsWebApi\StudentsWebApi.Persistance\obj\Debug\net6.0\ref\StudentsWebApi.Persistance.dll
