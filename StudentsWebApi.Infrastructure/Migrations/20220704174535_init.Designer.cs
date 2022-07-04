@@ -11,7 +11,7 @@ using StudentsWebApi.Infrastructure.Context;
 namespace StudentsWebApi.Infrastructure.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20220629121608_init")]
+    [Migration("20220704174535_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
