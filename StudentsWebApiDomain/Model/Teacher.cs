@@ -1,10 +1,12 @@
-﻿namespace StudentsWebApi.Domain.Model
+﻿using StudentsWebApi.Domain.ValueObjects;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace StudentsWebApi.Domain.Model
 {
     public class Teacher
     {
-        public int TeacherId { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-
+        public int Id { get; set; }
+        [NotMapped]
+        public PersonName? TeacherFullName { get; set; }
     }
 }

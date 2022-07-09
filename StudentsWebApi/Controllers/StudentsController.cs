@@ -29,7 +29,7 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            return await _context.Students.Include(x => x.Teacher).Include(x => x.Lesson).ToListAsync();
+            return await _context.Students.Include(x => x.Teacher).Include(x => x.StudentFullName).Include(x => x.Lesson).ToListAsync();
 
         }
 
@@ -46,7 +46,7 @@ namespace StudentsWebApi.Controllers
                 return NotFound();
             }
             var student = await _context.Students.Include(x => x.Teacher)
-                .Include(x => x.Lesson).FirstAsync(p => p.StudentId == id);
+                .Include(x => x.Lesson).FirstAsync(p => p.Id == id);
             if (student == null)
             {
                 return NotFound();
@@ -64,7 +64,7 @@ namespace StudentsWebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStudent(int id, Student student)
         {
-            if (id != student.StudentId)
+            if (id != student.Id)
             {
                 return BadRequest();
             }
@@ -104,7 +104,7 @@ namespace StudentsWebApi.Controllers
             _context.Students.Add(student);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetStudent", new { id = student.StudentId }, student);
+            return CreatedAtAction("GetStudent", new { id = student.Id }, student);
         }
 
         /// <summary>
@@ -120,8 +120,8 @@ namespace StudentsWebApi.Controllers
                 return NotFound();
             }
             var student = await _context.Students.Include(x => x.Teacher)
-                .Include(x => x.Lesson).FirstAsync(p => p.StudentId == id);
-            var teacher = await _context.Teachers.FirstAsync(k => k.TeacherId == id);
+                .Include(x => x.Lesson).FirstAsync(p => p.Id == id);
+            var teacher = await _context.Teachers.FirstAsync(k => k.Id == id);
             if (student == null)
             {
                 return NotFound();
@@ -136,7 +136,7 @@ namespace StudentsWebApi.Controllers
 
         private bool StudentExists(int id)
         {
-            return (_context.Students?.Any(e => e.StudentId == id)).GetValueOrDefault();
+            return (_context.Students?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

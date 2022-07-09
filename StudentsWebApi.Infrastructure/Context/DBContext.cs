@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StudentsWebApi.Domain.Model;
+using StudentsWebApi.Domain.ValueObjects;
 
 namespace StudentsWebApi.Infrastructure.Context
 {
@@ -16,10 +17,9 @@ namespace StudentsWebApi.Infrastructure.Context
             modelBuilder.Entity<Lesson>().HasMany(l => l.Students)
                     .WithOne(s => s.Lesson)
                     .IsRequired();
-
-
-
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<PersonName>().HasNoKey();
+
         }
     }
 }
