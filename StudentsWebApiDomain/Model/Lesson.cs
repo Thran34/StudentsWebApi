@@ -2,7 +2,9 @@
 {
     public class Lesson
     {
-        public int LessonId { get; set; }
+        public int Id { get; set; }
         public string LessonSubject { get; set; }
+
+        public IEnumerable<Student> Students { get; set; }
     }
 }
