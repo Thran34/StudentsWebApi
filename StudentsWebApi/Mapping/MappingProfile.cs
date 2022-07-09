@@ -9,7 +9,6 @@ namespace StudentsWebApi.Mapping
         {
             ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
         }
-
         private void ApplyMappingsFromAssembly(Assembly assembly)
         {
             var types = assembly.GetExportedTypes()
@@ -22,7 +21,6 @@ namespace StudentsWebApi.Mapping
                 var methodInfo = type.GetMethod("Mapping");
                 methodInfo.Invoke(instance, new object[] { this });
             }
-
         }
     }
 }
