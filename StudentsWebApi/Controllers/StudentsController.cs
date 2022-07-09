@@ -29,7 +29,8 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            return await _context.Students.Include(x => x.Teacher).ToListAsync();
+            return await _context.Students.Include(x => x.Teacher).Include(x => x.Lesson).ToListAsync();
+
         }
 
         /// <summary>
@@ -44,7 +45,8 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            var student = await _context.Students.Include(x => x.Teacher).FirstAsync(p => p.StudentId == id);
+            var student = await _context.Students.Include(x => x.Teacher)
+                .Include(x => x.Lesson).FirstAsync(p => p.StudentId == id);
             if (student == null)
             {
                 return NotFound();
@@ -117,7 +119,8 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            var student = await _context.Students.Include(x => x.Teacher).FirstAsync(p => p.StudentId == id);
+            var student = await _context.Students.Include(x => x.Teacher)
+                .Include(x => x.Lesson).FirstAsync(p => p.StudentId == id);
             var teacher = await _context.Teachers.FirstAsync(k => k.TeacherId == id);
             if (student == null)
             {
