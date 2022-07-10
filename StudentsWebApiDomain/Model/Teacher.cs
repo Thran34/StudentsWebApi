@@ -1,11 +1,10 @@
-﻿using StudentsWebApi.Domain.ValueObjects;
+﻿using StudentsWebApi.Domain.Common;
+using StudentsWebApi.Domain.ValueObjects;
 
 namespace StudentsWebApi.Domain.Model
 {
-    public class Teacher
+    public class Teacher : AuditableEntity
     {
-        public int Id { get; set; }
-
         public PersonName? TeacherFullName { get; set; }
     }
 }
