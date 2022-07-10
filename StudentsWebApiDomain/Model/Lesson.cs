@@ -7,7 +7,7 @@ namespace StudentsWebApi.Domain.Model
         public int Id { get; set; }
         public string LessonSubject { get; set; }
         [JsonIgnore]
-
         public IEnumerable<Student>? Students { get; set; }
+
     }
 }

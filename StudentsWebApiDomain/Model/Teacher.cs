@@ -1,10 +1,11 @@
-﻿namespace StudentsWebApi.Domain.Model
+﻿using StudentsWebApi.Domain.ValueObjects;
+
+namespace StudentsWebApi.Domain.Model
 {
     public class Teacher
     {
-        public int TeacherId { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
+        public int Id { get; set; }
 
+        public PersonName? TeacherFullName { get; set; }
     }
 }
