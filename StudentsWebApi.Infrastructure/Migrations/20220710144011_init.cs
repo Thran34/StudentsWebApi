@@ -4,7 +4,7 @@
 
 namespace StudentsWebApi.Infrastructure.Migrations
 {
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,22 +22,13 @@ namespace StudentsWebApi.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PersonName",
-                columns: table => new
-                {
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Teachers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TeacherFullName_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TeacherFullName_LastName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -50,7 +41,11 @@ namespace StudentsWebApi.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    StudentFullName_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StudentFullName_LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Age = table.Column<int>(type: "int", nullable: false),
+                    ParentFullName_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ParentFullName_LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LessonId = table.Column<int>(type: "int", nullable: false),
@@ -85,9 +80,6 @@ namespace StudentsWebApi.Infrastructure.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "PersonName");
-
             migrationBuilder.DropTable(
                 name: "Students");
 

@@ -86,19 +86,6 @@ namespace StudentsWebApi.Infrastructure.Migrations
                     b.ToTable("Teachers");
                 });
 
-            modelBuilder.Entity("StudentsWebApi.Domain.ValueObjects.PersonName", b =>
-                {
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("PersonName");
-                });
-
             modelBuilder.Entity("StudentsWebApi.Domain.Model.Student", b =>
                 {
                     b.HasOne("StudentsWebApi.Domain.Model.Lesson", "Lesson")
@@ -111,9 +98,81 @@ namespace StudentsWebApi.Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("TeacherId");
 
+                    b.OwnsOne("StudentsWebApi.Domain.ValueObjects.PersonName", "ParentFullName", b1 =>
+                        {
+                            b1.Property<int>("StudentId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("LastName")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.HasKey("StudentId");
+
+                            b1.ToTable("Students");
+
+                            b1.WithOwner()
+                                .HasForeignKey("StudentId");
+                        });
+
+                    b.OwnsOne("StudentsWebApi.Domain.ValueObjects.PersonName", "StudentFullName", b1 =>
+                        {
+                            b1.Property<int>("StudentId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("LastName")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.HasKey("StudentId");
+
+                            b1.ToTable("Students");
+
+                            b1.WithOwner()
+                                .HasForeignKey("StudentId");
+                        });
+
                     b.Navigation("Lesson");
 
+                    b.Navigation("ParentFullName");
+
+                    b.Navigation("StudentFullName");
+
                     b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("StudentsWebApi.Domain.Model.Teacher", b =>
+                {
+                    b.OwnsOne("StudentsWebApi.Domain.ValueObjects.PersonName", "TeacherFullName", b1 =>
+                        {
+                            b1.Property<int>("TeacherId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("LastName")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.HasKey("TeacherId");
+
+                            b1.ToTable("Teachers");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TeacherId");
+                        });
+
+                    b.Navigation("TeacherFullName");
                 });
 
             modelBuilder.Entity("StudentsWebApi.Domain.Model.Lesson", b =>

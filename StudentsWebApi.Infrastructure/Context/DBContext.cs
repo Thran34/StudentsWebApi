@@ -17,8 +17,15 @@ namespace StudentsWebApi.Infrastructure.Context
             modelBuilder.Entity<Lesson>().HasMany(l => l.Students)
                     .WithOne(s => s.Lesson)
                     .IsRequired();
+            modelBuilder.Entity<Student>().OwnsOne(typeof(PersonName), "StudentFullName");
+            modelBuilder.Entity<Student>().OwnsOne(typeof(PersonName), "ParentFullName");
+            modelBuilder.Entity<Teacher>().OwnsOne(typeof(PersonName), "TeacherFullName");
+
+
+
+
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<PersonName>().HasNoKey();
+
 
         }
     }

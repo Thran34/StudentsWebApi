@@ -18,6 +18,7 @@ namespace StudentsWebApi.Controllers
             _context = context;
         }
 
+
         /// <summary>
         /// Get all students from database
         /// </summary>
@@ -29,8 +30,7 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            return await _context.Students.Include(x => x.Teacher).Include(x => x.StudentFullName).Include(x => x.Lesson).ToListAsync();
-
+            return await _context.Students.Include(x => x.Teacher).Include(x => x.Lesson).ToListAsync();
         }
 
         /// <summary>
@@ -45,8 +45,8 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            var student = await _context.Students.Include(x => x.Teacher)
-                .Include(x => x.Lesson).FirstAsync(p => p.Id == id);
+            var student = await _context.Students.FindAsync(id);
+
             if (student == null)
             {
                 return NotFound();
@@ -89,13 +89,14 @@ namespace StudentsWebApi.Controllers
 
             return NoContent();
         }
+
         /// <summary>
         /// Add new student to database
         /// </summary>
         /// <param name="student"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<Student>> PostStudent([FromBody] Student student)
+        public async Task<ActionResult<Student>> PostStudent(Student student)
         {
             if (_context.Students == null)
             {
@@ -119,16 +120,13 @@ namespace StudentsWebApi.Controllers
             {
                 return NotFound();
             }
-            var student = await _context.Students.Include(x => x.Teacher)
-                .Include(x => x.Lesson).FirstAsync(p => p.Id == id);
-            var teacher = await _context.Teachers.FirstAsync(k => k.Id == id);
+            var student = await _context.Students.FindAsync(id);
             if (student == null)
             {
                 return NotFound();
             }
 
             _context.Students.Remove(student);
-            _context.Teachers.Remove(teacher);
             await _context.SaveChangesAsync();
 
             return NoContent();
