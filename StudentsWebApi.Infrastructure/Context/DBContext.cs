@@ -22,6 +22,10 @@ namespace StudentsWebApi.Infrastructure.Context
             modelBuilder.Entity<Student>().OwnsOne(typeof(PersonName), "ParentFullName");
             modelBuilder.Entity<Teacher>().OwnsOne(typeof(PersonName), "TeacherFullName");
 
+
+            modelBuilder.Entity<Student>().OwnsOne(typeof(Email), "Email");
+
+
             base.OnModelCreating(modelBuilder);
 
 

@@ -50,10 +50,6 @@ namespace StudentsWebApi.Infrastructure.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("LessonId")
                         .HasColumnType("int");
 
@@ -163,6 +159,29 @@ namespace StudentsWebApi.Infrastructure.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("StudentId");
                         });
+
+                    b.OwnsOne("StudentsWebApi.Domain.ValueObjects.Email", "Email", b1 =>
+                        {
+                            b1.Property<int>("StudentId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("DomainName")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("UserName")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.HasKey("StudentId");
+
+                            b1.ToTable("Students");
+
+                            b1.WithOwner()
+                                .HasForeignKey("StudentId");
+                        });
+
+                    b.Navigation("Email");
 
                     b.Navigation("Lesson");
 
